@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--web.xml is your deployment descriptor
+        this is how tomcat gathers information about your project, such as welcome files,
+            available com.steve360.servlets, how to handle errors and exceptions, and other various
+            configurations you may want tomcat to know about.
+    It belongs in src/main/webapp/WEB-INF/ directory
+-->
+<web-app
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+        version="2.5">
+
+    <listener>
+        <listener-class>com.steve360.servlets.DependencyLoaderListener</listener-class>
+    </listener>
+
+
+    <servlet-mapping>
+        <servlet-name>userServlet</servlet-name>
+        <url-pattern>/users</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>userServlet</servlet-name>
+        <servlet-class>com.steve360.servlets.UserServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>reimbursementServlet</servlet-name>
+        <url-pattern>/reimbursements</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>reimbursementServlet</servlet-name>
+        <servlet-class>com.steve360.servlets.ReimbursementServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>VerificationServlet</servlet-name>
+        <url-pattern>/verification</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>VerificationServlet</servlet-name>
+        <servlet-class>com.steve360.servlets.VerificationServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!-- CORS FILTER -->
+    <filter>
+        <filter-name>CORSFilter</filter-name>
+        <filter-class>com.steve360.servlets.CORSFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CORSFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!-- /CORS FILTER -->
+
+    </web-app>

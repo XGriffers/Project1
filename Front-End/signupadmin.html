@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./favicon/favicon.ico">
+    <script src="./javascript.js"></script>
+    <title>ERS - Signup Admin</title>
+</head>
+
+<body>
+    <div>
+        <header class="title">
+            <h1>
+                Welcome to the Employee Reimbursement System
+            </h1>
+        </header>
+    </div>
+
+    <div class="signUp">
+        <h3>Sign Up</h3>
+        <input type="text" placeholder="Username" id="userName" required>
+        <input type="email" placeholder="Enter your Email" id="email" required>
+        <input type="password" placeholder="Enter Your Password" id="password" required>
+        <input type="password" placeholder="Re-Enter Your Password" id="passwordConf" required>
+        <input type="text" name="roleEmp" id="roleAdmin" value="Administrator" hidden readonly>
+
+        <input type="button" value="Submit" onclick="signupAdmin()">
+        <input type="button" value="Cancel" id="cancelBtn" onclick="backToHome()">
+    </div>
+</body>
+
+</html>

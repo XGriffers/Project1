@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <script src="./javascript.js"></script>
+    <title>ERS - Reimbursements</title>
+</head>
+<nav class="navBar">
+    <ul>
+        <li><a href="./AdminEmployeeTicketing.html">Submit New Claim</a></li>
+        <li><a href="./adminDashboard.html">Remove Employee</a></li>
+        <li><a href="./employeeLedger.html">Employee Ledger</a></li>
+        <li><a onclick="logout()">Logout</a></li>
+    </ul>
+</nav>
+<div>
+    <header class="title">
+        <h1>
+            Welcome to the Employee Reimbursement System
+        </h1>
+    </header>
+</div>
+
+
+<body>
+    <form onsubmit="return false">
+        <h3>View Your Current List of Reimbursements</h3>
+
+        <button type="button" onclick="getAllReimbursements()">View Your Reimbursements</button>
+        <button type="button" onclick="getAllReimbursementsAdmin()">View All Employee's Reimbursements</button>
+        <button type="button" onclick="filterAllReimbursementsAdmin()">Filter All Employee's Results</button>
+        <button type="button" onclick="clrList()">Clear List</button>
+        <br>
+        <input type="text" id="search" onkeyup="myFunction()" placeholder="Filter">
+        <br>
+
+        <button type="button" onclick="showReimbursementsAdmin()">Edit</button>
+    </form>
+    <br>
+    <ul id="ListEdit"></ul>
+    <ul id="List"></ul>
+
+
+
+
+
+
+
+</body>
+
+</html>

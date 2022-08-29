@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
+    <script src="./javascript.js"></script>
+    <title>ERS - Reimbursements</title>
+</head>
+<nav class="navBar">
+    <ul>
+        <li><a href="./EmpEmployeeTicketing.html">Submit New Claim</a></li>
+        <li><a onclick="logout()">Logout</a></li>
+    </ul>
+</nav>
+<div>
+    <header class="title">
+        <h1>
+            Welcome to the Employee Reimbursement System
+        </h1>
+    </header>
+</div>
+
+
+<body>
+    <form onsubmit="return false">
+        <h3>View Your Current List of Reimbursements</h3>
+
+        <button type="button" onclick="getAllReimbursements()">View All</button>
+        <button type="button" onclick="filterAllReimbursements()">Filter Results</button>
+        </button><button type="button" onclick="clrList()">Clear
+            List</button>
+        <button type="button" onclick="showReimbursementsEmp()">Edit</button>
+    </form>
+    <br>
+    <input type="text" id="search" onkeyup="myFunction()" placeholder="Filter">
+    <br>
+    <ul id="ListEdit"></ul>
+    <ul id="List"></ul>
+
+
+
+
+
+
+
+</body>
+
+</html>
